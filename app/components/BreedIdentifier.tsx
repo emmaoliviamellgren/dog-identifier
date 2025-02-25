@@ -42,7 +42,7 @@ const BreedIdentifier = () => {
 		img.onload = async () => {
 			const model = await mobilenet.load();
 			const predictions = await model.classify(img);
-			
+
 			const breed = predictions[0]?.className.split(',')[0];
 			setPrediction(breed || 'Unknown breed');
 
@@ -52,7 +52,7 @@ const BreedIdentifier = () => {
 
 	return (
 		<>
-			<main className='flex flex-col gap-2'>
+			<main className='flex flex-col gap-2 pb-6'>
 				<div
 					{...getRootProps()}
 					className='flex flex-col justify-center gap-4 h-[150px] w-[450px] items-center rounded-md border-2 border-dashed text-sm cursor-pointer 
