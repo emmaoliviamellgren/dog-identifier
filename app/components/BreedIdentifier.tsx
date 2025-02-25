@@ -56,7 +56,7 @@ const BreedIdentifier = () => {
 				<div
 					{...getRootProps()}
 					className='flex flex-col justify-center gap-4 h-[150px] w-[85vw] min-w-[300px] md:w-[450px] items-center rounded-md border-2 border-dashed text-sm cursor-pointer 
-        transition-all duration-300 hover:bg-gray-200/30'>
+        transition-all duration-300 hover:bg-gray-200/30 px-4'>
 					<input {...getInputProps()} />
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
