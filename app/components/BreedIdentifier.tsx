@@ -55,7 +55,7 @@ const BreedIdentifier = () => {
 			<main className='flex flex-col gap-2 pb-6'>
 				<div
 					{...getRootProps()}
-					className='flex flex-col justify-center gap-4 h-[150px] w-[450px] items-center rounded-md border-2 border-dashed text-sm cursor-pointer 
+					className='flex flex-col justify-center gap-4 h-[150px] w-[85vw] min-w-[300px] md:w-[450px] items-center rounded-md border-2 border-dashed text-sm cursor-pointer 
         transition-all duration-300 hover:bg-gray-200/30'>
 					<input {...getInputProps()} />
 					<svg
@@ -89,7 +89,7 @@ const BreedIdentifier = () => {
 							</svg>
 						</p>
 					) : (
-						<p className='text-gray-600 flex items-center'>
+						<p className='text-gray-600 flex items-center flex-wrap justify-center text-center'>
 							<span className='font-semibold mr-1'>
 								Drag & drop
 							</span>{' '}
@@ -118,7 +118,7 @@ const BreedIdentifier = () => {
 				{image && (
 					<motion.div
 						{...slideUpOnEnter}
-						className='flex justify-start gap-4 p-3 h-auto w-[450px] items-center rounded-md border text-sm'>
+						className='flex flex-wrap justify-start gap-4 p-3 h-auto w-[85vw] min-w-[300px] md:w-[450px] items-center rounded-md border text-sm'>
 						<Image
 							src={image}
 							width={240}
