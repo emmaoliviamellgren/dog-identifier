@@ -19,7 +19,5 @@ export const convertImageFormat = async (fileFormat: string | Blob): Promise<str
 		reader.readAsDataURL(file);
 		reader.onload = () => resolve(reader.result as string);
 		reader.onerror = (error) => reject(error);
-
-		console.log("file:", file);
 	});
 };

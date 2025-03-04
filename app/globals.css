@@ -6,6 +6,13 @@
 	:root {
 		font-family: Geist;
 
+		background-color: oklch(0.967 0.003 264.542);
+
+		scrollbar-width: none;
+
+		width: 100%;
+		overflow-x: hidden;
+
 		--background: 0 0% 100%;
 
 		--foreground: 0 0% 3.9%;
@@ -110,6 +117,15 @@
 @layer base {
 	* {
 		@apply border-border outline-ring/50;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
 	}
 	body {
 		@apply bg-background text-foreground;

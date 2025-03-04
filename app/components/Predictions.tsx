@@ -3,6 +3,13 @@ import { bounceInOnEnter } from '../utils/animations';
 import { motion } from 'motion/react';
 import Loader from './Loader';
 
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from '@/components/ui/accordion';
+
 interface Props {
 	predictions: Prediction[] | null;
 	loading: boolean;
@@ -38,11 +45,27 @@ const Predictions = ({ predictions, loading }: Props) => {
 							</p>
 						</motion.div>
 
-						<ul>
-							{predictions.map((prediction, i) => (
-								<li key={i}>{prediction.breed}</li>
-							))}
-						</ul>
+						<Accordion
+							type='single'
+							collapsible
+							className='w-[85vw] min-w-[300px] md:w-[450px] my-12'>
+							<AccordionItem value='1'>
+								<AccordionTrigger className='text-gray-600'>
+									Not correct? See other predictions
+								</AccordionTrigger>
+								<AccordionContent className='inline-flex items-center flex-wrap justify-start w-full gap-2'>
+									{predictions
+										.slice(1, 7)
+										.map((prediction, i) => (
+											<span
+												className='bg-gray-200 px-2 py-1 rounded-md text-xs'
+												key={i}>
+												{prediction.breed}
+											</span>
+										))}
+								</AccordionContent>
+							</AccordionItem>
+						</Accordion>
 					</>
 				)
 			)}
