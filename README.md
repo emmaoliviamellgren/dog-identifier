@@ -2,8 +2,7 @@ A fun little side project to learn the basics in machine learning with the mobil
 
 Created with:
 ⚡ Next.js
-⚡ TensorFlow.js
-⚡ MobileNet
+⚡ Clarifai
 ⚡ Framer Motion
 
 Features:
