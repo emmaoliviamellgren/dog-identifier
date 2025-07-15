@@ -18,6 +18,7 @@ const ImageUploader = ({ onImageUpload, setFileName }: Props) => {
 				setFileName(file.name);
 			}
 		},
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[onImageUpload]
 	);
 

@@ -57,6 +57,12 @@ export async function POST(req: NextRequest) {
 		);
 
 		if (!response.ok) {
+			if (response.status === 413) {
+				return NextResponse.json(
+					{ error: "File is too big - max 32MB" },
+					{ status: 413 }
+				);
+			}
 			return NextResponse.json(
 				{ error: "Clarifai API error" },
 				{ status: response.status }
